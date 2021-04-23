@@ -30,7 +30,7 @@ def addAccount():
     root.geometry("600x500")
 
     mydatabase = "password_recorder"
-    con = pymysql.connect(host="192.168.1.22",
+    con = pymysql.connect(host="192.168.1.20",
                           user="root", database=mydatabase)
     cur = con.cursor()
 

@@ -3,7 +3,7 @@ from tkinter import messagebox
 import pymysql
 
 mydatabase = "password_recorder"
-con = pymysql.connect(host="192.168.1.22",
+con = pymysql.connect(host="192.168.1.20",
                       user="root", database=mydatabase)
 cur = con.cursor()
 
@@ -29,8 +29,8 @@ def View():
     LabelFrame = Frame(root, bg='black')
     LabelFrame.place(relx=0.1, rely=0.3, relwidth=0.8, relheight=0.5)
     y = 0.25
-    Label(LabelFrame, text="%-15s%-50s%-30s%-20s" % ('AccountName ', '      username',
-                                                     'email', 'password'), bg='black', fg='white').place(relx=0.09, rely=0.1)
+    Label(LabelFrame, text="%-20s%-25s%-45s%-20s" % ('AccountName', 'Username',
+                                                     'Email', 'Password'), bg='black', fg='white').place(relx=0.09, rely=0.1)
     Label(LabelFrame, text="----------------------------------------------------------------------------------",
           bg='black', fg='white').place(relx=0.05, rely=0.2)
     getAccounts = "select * from "+accountTable
